@@ -16,6 +16,9 @@ h1{
     font-family:  Arial, Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+h2{
+    padding-bottom: 15px;
+}
 nav ul {
     list-style: none;
     padding: 14px 20px;
@@ -63,4 +66,27 @@ footer{
 .preco{
     color:coral;
     font-weight: bold;
+}
+form {
+    padding: 15px;
+    border: 1px solid rgb(0, 110, 255);
+}
+label {
+    color: rgb(0, 110, 255);
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #CCC
+}
+input[type="submit"] {
+    background-color: darkred;
+    color: #FFF;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
 }

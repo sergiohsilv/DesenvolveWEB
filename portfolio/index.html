@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="folha/style.css">
+    <script src="https://kit.fontawesome.com/b9a859afa9.js" crossorigin="anonymous"></script>
 </head>
 <body>
         <div id="header">
@@ -20,7 +21,91 @@
                         <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
+                <div class="texto-cabecalho">
+                    <p>UI/UX Designer</p>
+                    <h1>Olá, meu nome é <span>John Doe</span></h1>
+                </div>
             </div>
         </div>
+        <!-- --------------- SOBRE --------------- -->
+        <div id="sobre">
+            <div class="container">
+                <div class="linha">
+                    <div class="sobre-col-1">
+                        <img src="imagens/sobre.png" alt="foto com fundo verde">
+                    </div>
+                    <div class="sobre-col-2">
+                        <h1 class="subtitulo">Sobre</h1>
+                        <p>Olá! Meu nome é John Doe e sou um desenvolvedor web apaixonado por criar soluções inovadoras e eficientes. Com experiência em diversas tecnologias e um olhar atento aos detalhes, meu objetivo é transformar ideias em realidade através de código limpo e funcional. Vamos trabalhar juntos para levar seu projeto ao próximo nível.</p>
+                        <div class="aba-titulos">
+                            <p class="aba-links link-ativo" onclick="abriraba('skills')">Skills</p>
+                            <p class="aba-links" onclick="abriraba('experiencia')">Experiência</p>
+                            <p class="aba-links"onclick="abriraba('formacao')">Formação</p>
+                        </div>
+                        <div class="aba-conteudos aba-ativa" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Desenvolvimento de Interface WEB/APP</li>
+                                <li><span>Web Development</span><br>Desenvolvimento de Sites</li>
+                                <li><span>APP Development</span><br>Desenvolvimento de Apps para Android e iOS</li>
+                            </ul>
+                        </div>
+                        <div class="aba-conteudos" id="experiencia">
+                            <ul>
+                                <li><span>2021 - Até hoje</span><br>Professor Honorário no MIT</li>
+                                <li><span>2011 - 2021</span><br>CIO at IBM</li>
+                                <li><span>2004 - 2011</span><br>desenvolvedor na Google Inc.</li>
+                            </ul>
+                        </div>
+                        <div class="aba-conteudos" id="formacao">
+                            <ul>
+                                <li><span>2010</span><br>MBA no MIT</li>
+                                <li><span>2009</span><br>MBA Havard</li>
+                                <li><span>2003</span><br>Serviço Nacional de Aprendizagem Comercial (Senac) - Botucatu / SP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --------------- SERVIÇOS --------------- -->
+        <div id="servicos">
+            <div class="container">
+                <h1 class="subtitulo">Serviços</h1>
+                <div class="lista-servicos">
+                    <div>
+                        <i class="fa-brands fa-codepen"></i>
+                        <h2>UX/UI</h2>
+                        <p>Oferecemos serviços de design UX/UI para criar interfaces intuitivas e atraentes que proporcionam uma experiência de usuário excepcional. Nosso processo envolve pesquisa de usuário, criação de wireframes e protótipos, e testes de usabilidade para garantir que o design atenda às necessidades dos usuários e aos objetivos do seu negócio.</p>
+                        <a href="#">saiba mais</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Desenvolvemos sites personalizados e funcionais, utilizando as tecnologias mais recentes para garantir desempenho, segurança e escalabilidade. Seja um site institucional, um blog ou uma plataforma de e-commerce, nossa equipe está pronta para transformar suas ideias em realidade.</p>
+                        <a href="#">saiba mais</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h2>Desenvolvimento de Interfaces Web/APP</h2>
+                        <p>Especializados em desenvolvimento de interfaces para web e aplicativos, criamos soluções que são visualmente atraentes e fáceis de usar. Utilizamos frameworks modernos e práticas recomendadas para garantir que suas interfaces sejam rápidas, responsivas e acessíveis em diversos dispositivos.</p>
+                        <a href="#">saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+    var abaLinks = document.getElementsByClassName("aba-links");
+    var abaConteudos = document.getElementsByClassName("aba-conteudos");
+        function abriraba(abaNome) {
+            for (abaLink of abaLinks) {
+                abaLink.classList.remove("link-ativo"); /* Remove a classe "link-ativo" de todos os links */
+            }
+            for (abaConteudo of abaConteudos) {
+                abaConteudo.classList.remove("aba-ativa"); /* Remove a classe "aba-ativa" de todos os conteudos   */
+            }
+            event.currentTarget.classList.add("link-ativo"); /* Adiciona a classe "link-ativo" ao link clicado */
+            document.getElementById(abaNome).classList.add("aba-ativa") /* Adiciona a classe "aba-ativa" ao conteúdo correspondente (usando o ID passado como parâmetro) */
+        }
+</script>
 </body>
 </html>

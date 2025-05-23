@@ -73,6 +73,10 @@ nav ul li a:hover::after {
 .texto-cabecalho h1 span {
     color: var(--magenta);
 }
+.texto-cabecalho .habilidades {
+    margin-top: 10px;
+    color: var(--magenta);
+}
 /* ******** SOBRE ******** */
 #sobre {
     padding: 80px 0;

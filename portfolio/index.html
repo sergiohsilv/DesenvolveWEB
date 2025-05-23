@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="folha/style.css">
     <script src="https://kit.fontawesome.com/b9a859afa9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
         <div id="header">
@@ -26,6 +27,7 @@
                 <div class="texto-cabecalho">
                     <p>UI/UX Designer</p>
                     <h1>Olá, meu nome é <span>John Doe</span></h1>
+                    <p>Posso te ajudar com <span class="habilidades"></span></p>
                 </div>
             </div>
         </div>
@@ -198,6 +200,15 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+</script>
+<script>
+    var typed = new Typed('.habilidades', {
+    strings: ['Desenvolvimento de Interfaces Web/APP','Web Development', 'Desenvolvimento de Apps para Android e iOS'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 500,
+    loop: true,
+    });
 </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <link rel="stylesheet" href="folha/style.css">
     <title>Senac</title>
@@ -26,9 +27,10 @@
             <div class="d-flex align-items-center ms-auto" style="gap: 10px;">
                 <div class="search-wrapper">
                     <input class="form-control search-input" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <i class="bi bi-search" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); color: #0056b3; pointer-events: none; font-size: 1.2rem;"></i>
                 </div>
 
-                <button class="btn btn-primary" type="submit">Área Exclusiva</button>
+                <button class="btn btn-primary" type="submit"><i class="bi bi-person-fill"></i>Área Exclusiva</button>
                 <i class="bi bi-backpack2-fill"></i>
             </div>
         </div>
@@ -56,6 +58,8 @@
                                 data-bs-toggle="dropdown">Unidades</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">São Paulo</a></li>
+                                <li><a class="dropdown-item" href="#">Botucatu</a></li>
+                                <li><a class="dropdown-item" href="#">Outros</a></li>
                             </ul>
                         </li>
 
@@ -68,6 +72,8 @@
                                 data-bs-toggle="dropdown">Descontos</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Descontos</a></li>
+                                <li><a class="dropdown-item" href="#">Graduação</a></li>
+                                <li><a class="dropdown-item" href="#">Tecnico</a></li>
                             </ul>
                         </li>
 
@@ -76,6 +82,7 @@
                                 data-bs-toggle="dropdown">Eventos</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Feiras</a></li>
+                                <li><a class="dropdown-item" href="#">Todos os Eventos</a></li>
                             </ul>
                         </li>
 
@@ -84,6 +91,7 @@
                                 Empresas</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Cursos in company</a></li>
+                                <li><a class="dropdown-item" href="#">Anuncio de Vagas</a></li>
                             </ul>
                         </li>
 
@@ -92,6 +100,8 @@
                                 Senac</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Missão</a></li>
+                                <li><a class="dropdown-item" href="#">Sobre nós</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
                             </ul>
                         </li>
 
@@ -100,6 +110,7 @@
                                 data-bs-toggle="dropdown">Serviços</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Biblioteca</a></li>
+                                <li><a class="dropdown-item" href="#">Fale com a gente</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -108,27 +119,62 @@
         </nav>
     </section>
 
-    <div class="video-bg">
-        <iframe
-            src="https://www.youtube.com/embed/Xpa8j57Slhs?autoplay=1&mute=1&controls=0&loop=1&playlist=Xpa8j57Slhs&modestbranding=1&showinfo=0&rel=0&playsinline=1"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-        </iframe>
-    </div>
-
-    <div class="overlay"></div>
-
-    <div class="content">
-        <h1>Inteligência Artificial</h1>
-        <p>Se prepare para as profissões do futuro com ferramentas e conteúdos inovadores. <u>Conheça os cursos</u></p>
-        <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="O que você procura?">
+    <div class="video-container">
+        <div class="video-bg">
+            <iframe
+                src="https://www.youtube.com/embed/Xpa8j57Slhs?autoplay=1&mute=1&controls=0&loop=1&playlist=Xpa8j57Slhs&modestbranding=1&showinfo=0&rel=0&playsinline=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    
+        <div class="overlay"></div>
+    
+        <div class="content">
+            <p class="titulo-graduacao"> Graduação | <span class="habilidades"></span></p>
+            <p>Desperte seu potencial para você ir longe na profissão e na vida <u>Conheça os cursos</u></p>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="O que você procura?">
+            </div>
         </div>
     </div>
 
+    <section id="cursos">
+        <div class="container">
+            <div class="row">
+                <h1>Conheça Nossos Cursos</h1>
+    
+                <div class="col-12 caixa-curso">
+                    <button type="button" class="btn btn-warning">Especialização Técnica</button>
+                    <button type="button" class="btn btn-warning">Técnico</button>
+                    <button type="button" class="btn btn-ensino-medio">Ensino Médio Técnico</button>
+                    <button type="button" class="btn btn-danger">Livre</button>
+                    <button type="button" class="btn btn-danger">Idiomas</button>
+                </div>
+    
+                <div class="col-12 caixa-curso">
+                    <button type="button" class="btn btn-primary">Graduação</button>
+                    <button type="button" class="btn btn-pos-graduacao">Pós-Graduação</button>
+                    <button type="button" class="btn btn-extensao">Extensão</button>
+                    <button type="button" class="btn btn-info">Jovem Aprendiz</button>
+                    <button type="button" class="btn btn-ead">EAD</button>
+                    <button type="button" class="btn btn-danger">Escola Panelinha</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
+<script>
+    var typed = new Typed('.habilidades', {
+    strings: ['Inscrições abertas','Até 50% de desconto', 'Use a nota do Enem'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 500,
+    loop: true,
+    });
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

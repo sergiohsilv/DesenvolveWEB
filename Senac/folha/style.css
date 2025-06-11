@@ -87,6 +87,9 @@
 .bi-backpack-fill {
     color: #2d72d9;
 }
+.bi-person-fill {
+    margin-right: 10px;
+}
 
 
 * {
@@ -102,58 +105,63 @@ html {
 }
 
 
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+
 .video-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
-    overflow: hidden;
+    z-index: 0;
 }
 
 .video-bg iframe {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     pointer-events: none;
 }
 
 
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
     background: rgba(0, 81, 153, 0.8);
-    z-index: -1;
+    z-index: 1;
 }
 
 
 .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 65vh;
-    color: white;
     padding: 20px;
-}
-
-.content h1 {
-    font-size: 3em;
-    font-weight: bold;
+    color: white;
 }
 
 .content p {
     font-size: 1.2em;
     margin-top: 10px;
-    max-width: 700px;
-}
-
-.search-box ::placeholder {
-    color: white;
+    max-width: 900px;
 }
 
 .search-box {
@@ -182,7 +190,73 @@ html {
     color: white;
     font-size: 1.2em;
 }
-.video-bg {
-    height: 80%;
-    width: 100%;
+
+.search-box ::placeholder {
+    color: white;
+}
+.habilidades {
+    color: gold;
+    font-size: 40px;
+}
+.content .titulo-graduacao {
+    color: #ffffff;
+    font-size: 40px;
+}
+/* -----Cursos----- */
+#cursos .btn {
+    color: #ffffff;
+    padding: 15px;
+    font-size: 15px;
+}
+.btn-ensino-medio {
+    background-color: #C761CB;
+    border-color: #C761CB;
+}
+
+.btn-ensino-medio:hover {
+    background-color: #C761CB;
+    border-color: #C761CB;
+}
+
+.btn-pos-graduacao {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn-pos-graduacao:hover {
+    background-color: #C761CB;
+    border-color: #C761CB;
+}
+
+.btn-extensao {
+    background-color: green;
+    border-color: green;
+}
+
+.btn-extensao:hover {
+    background-color: green;
+    border-color: green;
+}
+
+.btn-ead {
+    background-color: hotpink;
+    border-color: hotpink;
+}
+.btn-ead:hover {
+    background-color: hotpink;
+    border-color: hotpink;
+}
+.caixa-curso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#cursos h1 {
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }

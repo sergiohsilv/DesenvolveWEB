@@ -11,7 +11,7 @@
     <?php
     //var_dump($_POST);
 
-        echo "<p>Seja bom-vindo! <strong>".$_POST["nome"]."</strong><br>O e-mail digitado foi: ".$_POST["email"]."</p>";
+        echo "<p>Seja bom-vindo! <strong>".$_POST["nome"]."</strong><br>O e-mail digitado foi: ".$_POST["email"]."</p>"; //get
     ?>
 </body>
 </html>
